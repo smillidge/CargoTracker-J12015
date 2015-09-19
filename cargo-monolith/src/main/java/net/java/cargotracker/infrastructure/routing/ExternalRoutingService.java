@@ -22,8 +22,6 @@ import net.java.cargotracker.domain.model.location.UnLocode;
 import net.java.cargotracker.domain.model.voyage.VoyageNumber;
 import net.java.cargotracker.domain.model.voyage.VoyageRepository;
 import net.java.cargotracker.domain.service.RoutingService;
-import net.java.pathfinder.api.TransitEdge;
-import net.java.pathfinder.api.TransitPath;
 import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 
 /**

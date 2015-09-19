@@ -57,10 +57,10 @@ import net.java.cargotracker.infrastructure.persistence.jpa.JpaHandlingEventRepo
 import net.java.cargotracker.infrastructure.persistence.jpa.JpaLocationRepository;
 import net.java.cargotracker.infrastructure.persistence.jpa.JpaVoyageRepository;
 import net.java.cargotracker.infrastructure.routing.ExternalRoutingService;
-import net.java.pathfinder.api.GraphTraversalService;
-import net.java.pathfinder.api.TransitEdge;
-import net.java.pathfinder.api.TransitPath;
-import net.java.pathfinder.internal.GraphDao;
+//import net.java.pathfinder.api.GraphTraversalService;
+//import net.java.pathfinder.api.TransitEdge;
+//import net.java.pathfinder.api.TransitPath;
+//import net.java.pathfinder.internal.GraphDao;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -141,11 +141,11 @@ public class BookingServiceTest {
 				.addClass(ExternalRoutingService.class)
 				.addClass(JsonMoxyConfigurationContextResolver.class)
 				// Interface components
-				.addClass(TransitPath.class)
-				.addClass(TransitEdge.class)
+				//.addClass(TransitPath.class)
+				//.addClass(TransitEdge.class)
 				// Third-party system simulator
-				.addClass(GraphTraversalService.class)
-				.addClass(GraphDao.class)
+				//.addClass(GraphTraversalService.class)
+				//.addClass(GraphDao.class)
 				// Sample data.
 				.addClass(BookingServiceTestDataGenerator.class)
 				.addClass(SampleLocations.class)
