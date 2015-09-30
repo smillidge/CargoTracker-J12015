@@ -2,7 +2,7 @@ Cargo Tracker and Micro-services
 ================================
 
 This project takes the original [cargo tracker](https://cargotracker.java.net/) 
-application which is, in the terminology of microservices is a monolith, and 
+application which is, in the terminology of microservices a ***monolith***, and 
 splits out the pathfinder service as a separate micro service. 
 
 PathFinder Microservice
