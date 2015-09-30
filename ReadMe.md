@@ -72,5 +72,5 @@ In your Payara Micro log you will see a message like below when the service is c
 [2015-09-30T15:30:55.051+0100] [Payara 4.1] [INFO] [] [net.java.pathfinder.api.GraphTraversalService] [tid: _ThreadID=23 _ThreadName=http-listener(5)] [timeMillis: 1443623455051] [levelValue: 800] Path Finder Service called for USNYC to USDAL
 ```
 If you are using the nginx snippet or haproxy snippet you should see load balancing between
-the Payara Micro instances. Demonstratin ghow easy it is to scale out the microservice.
+the Payara Micro instances. Demonstrating how easy it is to scale out the microservice.
 
