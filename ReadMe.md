@@ -55,7 +55,13 @@ Once this has been configured the cargo-tracker.war file can be deployed to Glas
 Running the Application
 -----------------------
 
-Once you have the application deployed it can be accessed via http://127.0.0.1/cargo-tracker/.
+To run the application you must run GlassFish or Payara Server and deploy the 
+configured cargo-tracker application as described above. You must also run one or
+more Payara Micro instances. Payara Micro automatically binds to the next available
+http port starting from 8080 when using the command line above.
+
+Once you have the application deployed and Payara Micro running cargo tracker can
+ be accessed via http://127.0.0.1/cargo-tracker/.
 To see the Pathfinder micro service in action navigate to;
 * Administration Interface
 * Book
