@@ -13,7 +13,7 @@
             <env-entry>
                 <env-entry-name>graphTraversalUrl</env-entry-name>
                 <env-entry-type>java.lang.String</env-entry-type>
-                <env-entry-value>http://localhost:8081/pathfinder/rest/graph-traversal/shortest-path</env-entry-value>
+                <env-entry-value>http://127.0.0.1/pathfinder/rest/graph-traversal/shortest-path</env-entry-value>
             </env-entry>
         </session>
     </enterprise-beans>

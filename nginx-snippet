@@ -1,0 +1,24 @@
+	upstream glassfish {
+	    server 127.0.0.1:8080;
+	}
+
+        upstream payaramicro {
+            server 127.0.0.1:8081;
+            server 127.0.0.1:8082;
+            server 127.0.0.1:8083;
+            server 127.0.0.1:8084;
+            server 127.0.0.1:8085;
+        }
+
+        location /cargo-tracker/ {
+           proxy_pass http://glassfish;
+        }
+
+        location /pathfinder/ {
+           proxy_pass http://payaramicro;
+           proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+           proxy_redirect off;
+           proxy_buffering off;
+           proxy_set_header        X-Real-IP       $remote_addr;
+           proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        }

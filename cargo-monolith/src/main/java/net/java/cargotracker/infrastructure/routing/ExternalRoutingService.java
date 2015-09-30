@@ -33,8 +33,14 @@ import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 @Stateless
 public class ExternalRoutingService implements RoutingService {
 
+    // a URL retrieved from an externally configured JNDI entry
+    @Resource(lookup = "graphTraversalUrlJNDI")
+    private String graphTraversalUrlJNDI;
+
+    // the ejb entry URL
     @Resource(name = "graphTraversalUrl")
-    private String graphTraversalUrl;
+    private String graphTraversalUrl;    
+    
     // TODO Can I use injection?
     private final Client jaxrsClient = ClientBuilder.newClient();
     private WebTarget graphTraversalResource;
@@ -48,6 +54,10 @@ public class ExternalRoutingService implements RoutingService {
 
     @PostConstruct
     public void init() {
+        // if we have an explictly configured external JNDI entry use that
+        if (graphTraversalUrlJNDI != null) {
+            graphTraversalUrl = graphTraversalUrlJNDI;
+        }
         graphTraversalResource = jaxrsClient.target(graphTraversalUrl);
         graphTraversalResource.register(new MoxyJsonFeature()).register(
                 new JsonMoxyConfigurationContextResolver());
