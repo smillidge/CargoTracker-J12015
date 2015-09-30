@@ -35,15 +35,17 @@ backend glassfish
     mode http
     balance roundrobin
     option forwardfor
-    server web01 127.0.0.1:8080 check
+    server glassfish-das 127.0.0.1:8080 check
 	
 backend payaramicro
     mode http
     balance roundrobin
     option forwardfor
-    server web01 127.0.0.1:8081 check
-    server web02 127.0.0.1:8082 check
-    server web03 127.0.0.1:8083 check
+    server micro01 127.0.0.1:8081 check
+    server micro02 127.0.0.1:8082 check
+    server micro03 127.0.0.1:8083 check
+    server micro04 127.0.0.1:8084 check
+    server micro05 127.0.0.1:8085 check
 
 listen stats 127.0.0.1:1936
 	stats enable
