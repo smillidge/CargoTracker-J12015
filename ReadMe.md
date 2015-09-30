@@ -42,7 +42,7 @@ must be specified. There are two options for this;
             </env-entry>
 ```
 
-Alternative the ExternalRoutingService EJB can also retrieve the URL directly from JNDI.
+Alternatively the ExternalRoutingService EJB can also retrieve the URL directly from JNDI.
 If you bind the URL to JNDI at /graphTraversalUrlJNDI
 
 This can be done in GlassFish using the asadmin command
